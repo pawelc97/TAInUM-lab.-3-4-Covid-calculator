@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <title>Raport</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+    <meta charset="utf-8" />
+<head>
+<body>
+    <h1 style="color:white">Wynik diagnozy</h1>
+    <hr>
+        <h3 class="txt">Dane osobowe:</h3>
+        <span class="txt">Imię:</span> <input id="receivedName" disabled><br>
+        <span class="txt">Nazwisko:</span> <input id="receivedSurname" disabled><br>
+        <span class="txt">Numer tel. :</span> <input id="receivedPhoneNumber" disabled><br>
+        <span class="txt">Aktualna data:</span> <input id="receivedActDate" disabled><br>
+        <span class="txt">Data kontaktu z zarażoną osobą:</span> <input id="receivedContactDate" disabled><br>
+        <span class="txt">Data wystąpienia pierwszych objawów:</span> <input id="receivedSymptomsDate" disabled><br>
+        <span class="txt">Data testu:</span> <input id="receivedTestDate" disabled><br>
+        <hr>
+        <span class="txt" name="resultR" id="receivedResult">Czy osoba mogła się zarazić :</span><input id="receivedIsInfected" disabled><br>
+        <span class="txt" name="daysOfIsolation">Do kiedy kwarantanna:</span><input id="receivedDaysOfIsolation" disabled>
+    <hr>
+    
+    
+</body>
+<script>
+        // received data from index.html form
+        const rName = document.getElementById("receivedName");
+        const rSurname = document.getElementById("receivedSurname");
+        const rPhoneNumber = document.getElementById("receivedPhoneNumber");
+        const rActDate = document.getElementById("receivedActDate");
+        const rContactDate = document.getElementById("receivedContactDate");
+        const rSymptomsDate = document.getElementById("receivedSymptomsDate");
+        const rTestDate = document.getElementById("receivedTestDate");
+        const rIsInfected = document.getElementById("receivedIsInfected");
+        const rDaysOfIsolation = document.getElementById("receivedDaysOfIsolation");
+
+        rName.value = window.sessionStorage.getItem("name");
+        rSurname.value = window.sessionStorage.getItem("surname");
+        rPhoneNumber.value = window.sessionStorage.getItem("number");
+        rActDate.value = window.sessionStorage.getItem("todayIs");
+        rContactDate.value = window.sessionStorage.getItem("contactDate");
+        rSymptomsDate.value = window.sessionStorage.getItem("symptomsDate");
+        rTestDate.value = window.sessionStorage.getItem("testDate");
+        rIsInfected.value = window.sessionStorage.getItem("isInfected");
+        rDaysOfIsolation.value = window.sessionStorage.getItem("daysOfIsolation");
+
+</script>
+</html>

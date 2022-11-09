@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <title>Strona główna</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+    <meta charset="utf-8" />
+<head>
+<body>
+    <h1 style="color:white">Kalkulator Covid-19</h1>
+    <hr>
+    <form>
+        <h3 class="txt">Dane osobowe:</h3>
+        <span class="txt">Imię:</span>
+        <input type="text" id="name" value="" onkeyup="javascript:reggexName()">
+        <span id="nameInf"></span>
+        <br>
+
+        <span class="txt">Nazwisko:</span>
+        <input type="text" id="surname" value="" onkeyup="javascript:reggexSurname()">
+        <span id="surnameInf"></span>
+        <br>
+
+        <span class="txt">Nr.Telefonu:</span>
+        <input type="number" id="number" value="" onkeyup="javascript:reggexPhoneNumber()">
+        <span id="phoneNumberInf"></span>
+        <br><br>
+
+        <span class="txt">Aktualna data:</span><br>
+        <input type="date" id="todaysdate" value="" onchange="javascript:getActDate()"><br><br>
+
+        <span class="txt">Data kontaktu z zarażoną osobą:</span><br>
+        <input type="date" id="contactdate" value="" min="" onchange="javascript:getContactDate()"><br><br>
+
+        <span class="txt">Data wystąpienia pierwszych objawów:</span><br>
+        <input type="date" id="symptomsdate" value="" onchange="javascript:getSymptomDate()"><br><br>
+
+        <span class="txt">Data testu:</span><br>
+        <input type="date" id="testdate" value="" onchange="javascript:getTestDate()"><br><br>
+
+        <input type="checkbox" id="checkStatut" onclick="javascript:checkStatAgreement(this)"><span class="txt" id="statInf">Wyrażam zgodę na przetwarzanie moich danych osobowych</span><br>
+
+        <button onclick="javascript:send()">Zobacz raport</button>
+    </form>
+    <br>
+</body>
+</html>
